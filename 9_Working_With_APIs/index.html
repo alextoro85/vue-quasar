@@ -34,11 +34,10 @@
                                     ({{movie.vote_count}})</span>
                             </div>
                         </q-card-section>
-
                         <img :src="'https://image.tmdb.org/t/p/original'+movie.backdrop_path">
                     </q-card>
                     <q-inner-loading :showing="loading">
-                        <q-spinner-gears size="80px" color="primary" />
+                        <q-spinner-gears size="80px" color="primary"></q-spinner-gears>
                     </q-inner-loading>
                 </div>
                 <q-pagination v-model="page" :max="total_pages" input gutter="20px"
