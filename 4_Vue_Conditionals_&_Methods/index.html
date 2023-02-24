@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <span v-if="showMessage">{{ message }}</span>
+        <br>
+        <button @click="toggleMessage">Toggle Message</button>
+        <br>
+        <span class="container" :style="{backgroundColor: colorRed ? 'red' : 'blue'}">
+            {{ message}}</span>
+        <br>
+        <button @click="toggleColor">Toggle Color</button>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

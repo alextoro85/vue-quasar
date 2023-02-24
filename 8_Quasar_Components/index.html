@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons"
+        rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.11.6/dist/quasar.prod.css" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <q-layout view="lhh LpR lff" container
+            style="height: 100vh; padding-bottom: 200px;">
+            <q-page-container class="layout-container">
+                <div class="text-h2">Buttons</div>
+                <div class="q-pa-md q-gutter-sm">
+                    <q-btn color="white" text-color="black" label="Standard"></q-btn>
+                    <q-btn color="primary" label="Primary"></q-btn>
+                    <q-btn color="secondary" label="Secondary"></q-btn>
+                    <q-btn color="amber" glossy label="Amber"></q-btn>
+                    <q-btn color="brown-5" label="Brown 5"></q-btn>
+                    <q-btn color="deep-orange" glossy label="Deep Orange"></q-btn>
+                    <q-btn color="purple" label="Purple"></q-btn>
+                    <q-btn color="black" label="Black"></q-btn>
+                </div>
+                <br>
+                <div class="text-h2">Cards</div>
+                <div class="q-pa-md row items-start q-gutter-md">
+                    <q-card class="my-card" style="width: 300px">
+                        <q-card-section class="bg-primary text-white">
+                            <div class="text-h6">Our Changing Planet</div>
+                            <div class="text-subtitle2">by John Doe</div>
+                        </q-card-section>
+
+                        <q-separator></q-separator>
+
+                        <q-card-actions align="right">
+                            <q-btn flat>Action 1</q-btn>
+                            <q-btn flat>Action 2</q-btn>
+                        </q-card-actions>
+                    </q-card>
+                    <q-card class="my-card" style="width: 300px">
+                        <img src="https://cdn.quasar.dev/img/mountains.jpg">
+
+                        <q-card-section>
+                            <div class="text-h6">Our Changing Planet</div>
+                            <div class="text-subtitle2">by John Doe</div>
+                        </q-card-section>
+
+                        <q-card-section class="q-pt-none">
+                            {{ lorem }}
+                        </q-card-section>
+                    </q-card>
+                </div>
+                <br>
+                <div class="text-h2">Inputs</div>
+                <div class="q-gutter-md row">
+                    <q-input v-model="text" label="Standard"></q-input>
+                    <q-input filled v-model="text" label="Filled"></q-input>
+                </div>
+                <br>
+                <div class="text-h2">Menus</div>
+                <div class="q-gutter-md row">
+                    <q-btn color="primary" label="Basic Menu">
+                        <q-menu>
+                            <q-list style="min-width: 100px">
+                                <q-item clickable v-close-popup>
+                                    <q-item-section>New tab</q-item-section>
+                                </q-item>
+                                <q-item clickable v-close-popup>
+                                    <q-item-section>New incognito tab</q-item-section>
+                                </q-item>
+                                <q-separator></q-separator>
+                                <q-item clickable v-close-popup>
+                                    <q-item-section>Recent tabs</q-item-section>
+                                </q-item>
+                                <q-item clickable v-close-popup>
+                                    <q-item-section>History</q-item-section>
+                                </q-item>
+                                <q-item clickable v-close-popup>
+                                    <q-item-section>Downloads</q-item-section>
+                                </q-item>
+                                <q-separator></q-separator>
+                                <q-item clickable v-close-popup>
+                                    <q-item-section>Settings</q-item-section>
+                                </q-item>
+                                <q-separator></q-separator>
+                                <q-item clickable v-close-popup>
+                                    <q-item-section>Help &amp; Feedback</q-item-section>
+                                </q-item>
+                            </q-list>
+                        </q-menu>
+                    </q-btn>
+
+                    <q-btn color="secondary" label="Auto-Close Menu">
+                        <q-menu auto-close>
+                            <q-list style="min-width: 100px">
+                                <q-item clickable>
+                                    <q-item-section>New tab</q-item-section>
+                                </q-item>
+                                <q-item clickable>
+                                    <q-item-section>New incognito tab</q-item-section>
+                                </q-item>
+                                <q-separator></q-separator>
+                                <q-item clickable>
+                                    <q-item-section>Recent tabs</q-item-section>
+                                </q-item>
+                                <q-item clickable>
+                                    <q-item-section>History</q-item-section>
+                                </q-item>
+                                <q-item clickable>
+                                    <q-item-section>Downloads</q-item-section>
+                                </q-item>
+                                <q-separator></q-separator>
+                                <q-item clickable>
+                                    <q-item-section>Settings</q-item-section>
+                                </q-item>
+                                <q-separator></q-separator>
+                                <q-item clickable>
+                                    <q-item-section>Help &amp; Feedback</q-item-section>
+                                </q-item>
+                            </q-list>
+                        </q-menu>
+                    </q-btn>
+                </div>
+                <br>
+                <div class="text-h2">Icons</div>
+                <div class="q-mt-md q-gutter-md">
+                    <q-icon name="font_download" color="primary" size="32px"></q-icon>
+                    <q-icon name="warning" color="warning" size="4rem"></q-icon>
+                    <q-icon name="format_size" style="color: #ccc; font-size: 1.4em;"></q-icon>
+                    <q-icon name="print" color="teal" size="4.4em"></q-icon>
+                    <q-icon name="today" class="text-orange" size="2em"></q-icon>
+                    <q-icon name="style" size="3em"></q-icon>
+                </div>
+                <q-page-sticky position="top-right" :offset="[20, 20]">
+                    <q-btn icon="add" color="primary" label="Discover more" size="lg"
+                        href="https://quasar.dev/vue-components/"
+                        target="_blank"></q-btn>
+                </q-page-sticky>
+            </q-page-container>
+        </q-layout>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/quasar@2.11.6/dist/quasar.umd.prod.js"></script>
+<script src="app.js"></script>
+
+</html>

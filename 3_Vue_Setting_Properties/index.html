@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <span>{{ message }}</span>
+        <input type="text" :value="inputText">
+        <div class="blue-background" :class="classVar" :style="{width: widthValue}"></div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

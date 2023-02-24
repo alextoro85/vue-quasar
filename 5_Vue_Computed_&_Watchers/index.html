@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <input type="number" v-model="val1"><span>{{updateMessage1}}</span>
+        <br>
+        <input type="number" v-model="val2"><span>{{updateMessage2}}</span>
+        <br>
+        <span>Addition: {{ addition }}</span>
+        <br>
+        <span>Subtraction: {{ subtraction }}</span>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
