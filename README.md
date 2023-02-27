@@ -12,3 +12,4 @@
 - 7.- Components
 - 8.- QuasarJs- https://quasar.dev/
 - 9.- Using an API
+- 10.- Exercise: Add a button that displays a dialog showing the movie sinopsis
