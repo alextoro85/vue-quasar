@@ -11,7 +11,9 @@
 
 <body>
     <div id="app">
-        <my-button label="Button 1" color="blue"></my-button>
+        <my-button label="Toggle Button 1" color="orange"
+            @click="showButton = !showButton"></my-button>
+        <my-button v-if="showButton" label="Button 1" color="blue" log="true"></my-button>
     </div>
 </body>
 <script src="app.js"></script>

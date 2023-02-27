@@ -4,6 +4,7 @@ const app = Vue.createApp({
     },
     data() {
         return {
+            showButton: true,
         }
     },
 });
