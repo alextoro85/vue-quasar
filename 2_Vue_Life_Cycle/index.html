@@ -8,9 +8,9 @@
 
 <body>
     <div id="app">
-        <span>{{ message }}</span>
+        <span>{{ message }} {{counter}}</span>
         <br>
-        <button @click="message='Updated!'">Press To Update</button>
+        <button @click="message='Updated!'; counter++">Press To Update</button>
     </div>
 </body>
 <script src="app.js"></script>

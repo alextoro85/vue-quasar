@@ -1,6 +1,7 @@
 const app = Vue.createApp({
     data() {
         return {
+            counter: 0,
             message: 'Hello World!'
         }
     },
